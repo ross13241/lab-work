@@ -1,0 +1,41 @@
+"""Ross Gallagher
+banner ID:B01886848
+date: 2/6/2024"""
+
+def main():
+
+    
+    suspicious_ipaddress = [
+        "192.168.10.1",
+        "192.168.10.10",
+        "192.168.1.10",
+        "192.168.10.4",
+        "192.168.1.2"
+    ]
+    #printing first and last suspicious ip address
+    print("first suspicious ip address:", suspicious_ipaddress[0])
+    print("last suspicious ip address:", suspicious_ipaddress[-1])
+    
+    #USER INPUTS a ip address and then adds the ip address to the list of suspicious ip addresses
+    ip = input("enter ip address: ")  
+    suspicious_ipaddress.append(ip) #adding the user input to the list of suspicious ip addresses
+    print("updated list of suspicious ip addresses:", suspicious_ipaddress)
+
+    #removing a ip address from the list provided by the user
+    ip_remove = input("enter ip address to remove: ") 
+    suspicious_ipaddress.remove(ip_remove)      
+    print("updated list of suspicious ip addresses:", suspicious_ipaddress)
+
+    #displaying the number of ip addresses in the list
+    print("number of suspicious ip addresses:", len(suspicious_ipaddress))
+    #alllowing the user to search for a specific ip address in the list
+    ip_search = input("enter ip address to search: ")   
+    if ip_search in suspicious_ipaddress:
+        print(ip_search, "is in the list of suspicious ip addresses.")
+    else:
+        print(ip_search, "is not in the list of suspicious ip addresses.")
+
+        
+
+
+main()
